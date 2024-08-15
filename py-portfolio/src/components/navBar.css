@@ -1,0 +1,76 @@
+.navBar {
+    color: rgb(178, 172, 136);
+    font-family: Cambria, Cochin, Georgia, 'Times', Times New Roman, serif;
+    width: 100%;
+    /* background-color: red; */
+    position: fixed;
+    height: 5rem;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;   
+    justify-content: space-between;
+}
+
+.menuItems {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    list-style: none; /* Removes default list styling */
+    padding: 0%;
+    margin-top: 0; /* Adds margin from the top, adjust as needed */
+    font-size: 20px; /* Adjust font size as needed */
+
+}
+
+.menuItems li{
+    padding: 15px 20px; /* Adds padding around each list item */
+    margin-right: 20px; /* Adds margin between items, adjust as needed */
+}
+
+.menuItems a{
+    text-decoration: none;
+    color: rgb(206, 192, 112);
+}
+
+  
+  /* Initial state of nav-bar items */
+.nav-bar a {
+    position: relative; /* Needed for absolute positioning of pseudo-elements */
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+.navbar h1{
+   margin-left: 1.5rem;
+   color: rgb(206, 192, 112);
+}
+  
+  /* Before pseudo-element for top border */
+  .nav-bar a::before,
+  /* After pseudo-element for bottom border */
+  .nav-bar a::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Start from the center */
+    width: 0%; /* Initial width */
+    height: 2px; /* Border thickness */
+    background: rgb(178, 172, 136); /* Border color */
+    transition: all 0.5s; /* Smooth transition for the animation */
+  }
+  
+  .nav-bar a::before {
+    top: 0; /* Position at the top */
+  }
+  
+  .nav-bar a::after {
+    bottom: 0; /* Position at the bottom */
+  }
+  
+  /* Hover effects */
+  .nav-bar a:hover::before,
+  .nav-bar a:hover::after {
+    left: 0; /* Expand from the center to full width */
+    width: 100%;
+  }

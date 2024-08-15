@@ -1,0 +1,18 @@
+.achievement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+
+.achievement h1{
+    color: cyan;
+}
+
+.achievement p{
+    color: white;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
